@@ -7,10 +7,10 @@ import { Route, Routes } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 import UserPage from "./Pages/UserPage";
 
-
 function App() {
-
+  
   const {theme} = useTheme()
+
   return (
     <ThemeProvider theme={theme}>
       <ToastContainer/>

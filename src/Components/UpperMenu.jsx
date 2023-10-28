@@ -10,7 +10,6 @@ const UpperMenu = ({countDown}) => {
 
     } 
 
-
   return (
     <div className='upper-menu'>
         <div className="counter">

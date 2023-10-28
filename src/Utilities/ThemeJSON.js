@@ -14,13 +14,6 @@ const greyTheme = {
     typeBoxText: 'grey',
     graphColor : 'grey'
 }
-const purpleTheme = {
-    label : "Coloured-lightgrey",
-    background : '	#484848',
-    textColor : '#FF9999',
-    typeBoxText : '#FF9999',
-    graphColor : 'grey'
-}
 const Pink = {
     label : "Coloured-Pink",
     background :"black",

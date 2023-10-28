@@ -3,7 +3,6 @@ import AccountCircle from './AccountCircle';
 import KeyboardIcon from '@mui/icons-material/Keyboard';
 import { useNavigate } from 'react-router-dom';
 
-
 const Header = () => {
   const navigate = useNavigate()
   return (

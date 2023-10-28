@@ -5,7 +5,6 @@ const errorMapping = {
    'auth/invalid-uid' : 'The provided uid must be a non-empty string with at most 128 characters.',
    'auth/invalid-password' : 'The provided value for the password user property is invalid. It must be a string with at least six characters.',
    'auth/invalid-email' : 'The provided value for the email user property is invalid. It must be a string email address.',
-
 }
 
 export default errorMapping;

@@ -2,7 +2,6 @@ import { Box, Button, TextField } from '@mui/material'
 import React, { useState } from 'react'
 import { useTheme } from '../Context/ThemeContext'
 import {auth} from '../firebaseConfig'
-import { toast } from 'react-toastify';
 import errorMapping from '../Utilities/errorMapping';
 
  
@@ -15,20 +14,20 @@ const SignupForm = () => {
 
     const handleSubmit = ({handleModalClose})=>{
       if(!email || !password || !confirmPassword){
-        toast.warning("Please enter all details...")
+        alert("Please enter all details...")
         return;
       }
       if(password !== confirmPassword){
-           toast.error("Passwords mismatch. ")
+        alert("Passwords mismatch. ")
         return;
       }
       
       auth.createUserWithEmailAndPassword(email,password).then((res)=>{
-        toast.success("User created successfully...")
+        alert("User created successfully...")
         handleModalClose()
       }).catch((err)=>{
-        toast.error(errorMapping[err] || 'Some error occured')
-        toast.error(err)
+        alert(errorMapping[err] || 'Some error occured')
+        alert(err)
       })
     }
   return (

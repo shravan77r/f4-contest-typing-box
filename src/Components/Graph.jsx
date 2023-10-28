@@ -13,6 +13,7 @@ import { Line } from 'react-chartjs-2'
 import {useTheme} from '../Context/ThemeContext'
 
 
+
 ChartJS.register(
     CategoryScale,
     LinearScale,

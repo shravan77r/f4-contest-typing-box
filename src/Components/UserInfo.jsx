@@ -25,7 +25,6 @@ const UserInfo = ({totalTests}) => {
                     {user.metadata.creationTime}
                 </div>
                 </div>
-                
             </div>
             <div className="total-tests">
                 <span>Total test taken - {totalTests}</span>

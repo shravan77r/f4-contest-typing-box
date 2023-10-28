@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react'
 import Graph from './Graph'
 import { db, auth } from '../firebaseConfig';
-import { toast } from 'react-toastify';
-import { generate } from 'random-words';
 
 const Stats = ({wpm, accuracy, correctChars, incorrectChars, missedChars, extraChars, graphData }) => {
 
@@ -19,7 +17,7 @@ const Stats = ({wpm, accuracy, correctChars, incorrectChars, missedChars, extraC
 
         //not even type single word correctly. 
         if (isNaN(accuracy)) {
-            toast.error('Invalid test')
+            alert('Invalid test')
             return;
         }
         const resultRef = db.collection('Results') //firestore create database if there is not created.
@@ -34,9 +32,9 @@ const Stats = ({wpm, accuracy, correctChars, incorrectChars, missedChars, extraC
                 // name : 'user name'
             }
         ).then((res) => {
-            toast.success("Data saved to db")
+            alert("Data saved to db")
         }).catch((err) => {
-            toast.success("Not able to save results");
+            alert("Not able to save results");
         })
 
     }
@@ -46,7 +44,7 @@ const Stats = ({wpm, accuracy, correctChars, incorrectChars, missedChars, extraC
         if (auth.currentUser) {
             pushDataToDB();
         } else {
-            toast.warning('Login to save results')
+            alert('Login to save results')
         }
     })
 
